@@ -12,8 +12,15 @@
 * SSL (Secure Sockets Layer) : 서버 - 클라이언트 간 교환되는 데이터를 암호화하는 기술로, 대칭키 기반. HTTPS가 대표적.
 * TLS (Transport Sockets Later) : SSL 3.0 업그레이트 버전이 TLS 1.0.
 
-### 로컬에서 TLS 이용하기
+## 로컬에서 TLS 이용하기
 * 목표 : mediasoup demo를 위한 TLS 인증서 생성하기
 * 참고 : https://m.blog.naver.com/alice_k106/221468341565 (내 입장에서 가장 이해가 쉽게 되는 TLS 설명글이다!)
-1) ubuntu_ms:base 이미지 위에 letsencrypt 설치
-2) 
+
+### ubuntu_ms:base 에 인증서 발급받기
+* 참고 : https://devlog.jwgo.kr/2019/04/16/get-ssl-cert-from-letsencrypt/
+* 이미지 실행 후, apt install apache2
+* 아파치 설정 수정 : /etc/apache2/sites-available/자기설정파일명(예를 들어, 000-default.conf 같은) 을 열고 ServerName, ServerAdmin, DocumentRoot 를 수정
+   * ServerAdmin : webmaster@localhost
+   * DocumentRoot /var/www/html
+
+**ubuntu_ms:apache 이미지로 커밋**
