@@ -1,4 +1,4 @@
-# today_i_learned
+# Today_I_Learned
 개발에 관한 다양한 토픽을 공부하고 정리한 개인 자료실입니다.
 
 ## OS
